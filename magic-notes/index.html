@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magic Notes</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav id="nav">
+        <div class="nav_up">
+            <div class="nav left">
+                <span class="name">MAGIC NOTES</span>
+                <span class="home">Home</span>
+            </div>
+            <div class="nav right">
+                <span class="search">
+                    <span class="input"><input type="text" placeholder="Search" id="searchNote"></span>
+                    <span class="search-btn"><button>Search</button></span>
+                </span>
+                <span class="menu-icon" id="menuIcon"><i class="material-icons">menu</i></span>
+            </div>
+        </div>
+        <div class="nav_down" id="search">
+            <span class="search">
+                <span class="input"><input type="text" placeholder="Search" id="searchNote2"></span>
+                <span class="search-btn"><button>Search</button></span>
+            </span>
+        </div>
+    </nav>
+    <main>
+        <h1 class="header1">Welcome to Magic Notes</h1>
+        <div class="addnote_section">
+            <div class="addnote_head title">
+                Title
+            </div>
+            <div class="txtarea2">
+                <textarea name="Add Title" id="txtarea2"></textarea>
+            </div>
+            <div class="addnote_head">
+                Add a note
+            </div>
+            <div class="txtarea">
+                <textarea name="Add Notes" id="txtarea"></textarea>
+            </div>
+            <div class="addnote_btn">
+                <button id="add_btn">Add Note</button>
+            </div>
+        </div>
+        <hr>
+        <h1 class="header2">Your Notes</h1>
+        <hr>
+        <div class="notes_section" id="notes"></div>
+    </main>
+</body>
+<script src="js/script.js"></script>
+</html>
