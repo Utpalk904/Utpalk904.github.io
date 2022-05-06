@@ -1,0 +1,277 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #EAEDF0;
+    font-family: "Helvetica", "Arial", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+header {
+    background-color: #F6F7F8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 80%;
+    margin: 6% 0;
+    padding: 6% 5%;
+    border: 2px solid #c6c8c9;
+    border-radius: 5px;
+}
+header div h1 {
+    font-size: 30px;
+    color: #5D6063;
+    margin-bottom: 15px;
+}
+header .subhead {
+    color: #595c5e;
+}
+main {
+    background-color: #f6f9fa;
+    border: 2px solid #c6c8c9;
+    border-radius: 5px;
+    width: 80%;
+    margin-bottom: 5%;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #595c5e;
+    padding: 8% 2%;
+    font-size: 20px;
+    margin: 0 2%;
+}
+form .name, form .email {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+form .name input, .email input {
+    width: 100%;
+    font-size: 20px;
+    border-radius: 5px;
+    border: 2px solid #c6c8c9;
+    padding: 2% 5%;
+}
+form .name input:invalid, .email input:invalid {
+    border: 1px solid #D55C5F;
+    color: #D55C5F;
+    box-shadow: none;
+}
+form .name label {
+    margin-bottom: 2%;
+}
+form .email label {
+    margin-top: 9%;
+    margin-bottom: 2%;
+}
+.email input {
+    margin-bottom: 9%;
+}
+.radiobtn {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.radiobtn .stagesel input {
+    margin-top: 7%;
+    margin-bottom: 12%;
+}
+.radiobtn .stagesel label {
+    font-size: 17px;
+}
+.select-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+.select-menu .label {
+    margin-bottom: 3%;
+}
+.select-menu select {
+    font-size: 0.8em;
+    width: 120%;
+    margin-left: 4%;
+    border-radius: 2px;
+    border: 2px solid #c6c8c9;
+}
+.select-menu .menu {
+    margin-bottom: 12%;
+}
+.txt-area, .btns {
+    width: 100%;
+}
+.txt-area .label {
+    margin-bottom: 5%;
+}
+.txt-area textarea {
+    width: 100%;
+    font-size: 15px;
+    font-family: "Helvetica", "Arial", sans-serif;
+    padding: 6px;
+    min-height: 200px;
+    resize: none;
+    border-radius: 5px;
+    border: 2px solid #c6c8c9;
+}
+.checkbox {
+    margin-top: 12%;
+    margin-bottom: 7%;
+}
+.btns button {
+    width: 100%;
+    border-radius: 2px;
+    border: none;
+    color: white;
+    font-size: 22px;
+    margin: 2% 0;
+    padding: 3% 0;
+    cursor: pointer;
+}
+.btns .reset button {
+    background-color: #5995DA;
+}
+.btns .reset button:hover {
+    background-color: #1e79e0;
+}
+.btns .submit button:hover {
+    background-color: rgb(99, 156, 12);
+}
+.btns .submit button {
+    background-color: rgb(130, 189, 42);
+}
+
+@media screen and (min-width:700px){
+    header div h1 {
+        font-size: 30px;
+        color: #5D6063;
+        margin-bottom: 15px;
+    }
+    header {
+        margin: 2% 0;
+        padding: 1% 0;
+        width: 60%;
+    }
+    header .subhead {
+        font-size: 18px;
+        width: 40%;
+    }
+    main {
+        width: 60%;
+        margin-bottom: 5%;
+    }
+    form {
+        padding: 5% 2%;
+        font-size: 20px;
+        margin: 0 2%;
+    }
+    form .name, form .email {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    form .name label, form .email label {
+        margin-right: 5%;
+        margin-bottom: 0%;
+        margin-top: 0;
+    }
+    form .name input, .email input {
+        width: 69%;
+        font-size: 17px;
+        border-radius: 5px;
+        border: 2px solid #c6c8c9;
+        padding: 1% 2%;
+    }
+    .email {
+        margin: 5% 0;
+    }
+    .email input {
+        margin-bottom: 0%;
+    }
+    .radiobtn {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: flex-start;
+        margin-bottom: 5%;
+        align-items: center;
+        margin-left: 4%;
+    }
+    .radio-btn-head {
+        margin-right: 7%;
+    }
+    .radiobtn .stagesel {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 30%;
+    }
+    .select-menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        width: 100%;
+        margin-left: 6%;
+    }
+    .select-menu .label {
+        margin-right: 4.3%;
+        margin-bottom: 0;
+    }
+    .select-menu select {
+        font-size: 0.9em;
+        width: 160%;
+        color: #595c5e;
+        border-radius: 5px;
+    }
+    .select-menu .menu {
+        margin-bottom: 0;
+    }
+    .txt-area {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        width: 100%;
+        margin: 5% 0;
+    }
+    .txt-area .label {
+        margin-bottom: 0%;
+        margin: 0 4%;
+        margin-left: 6.5%;
+    }
+    .txt-area .text {
+        width: 69%;
+    }
+    .txt-area textarea {
+        font-size: 15px;
+        margin-left: 1.8%;
+        padding: 6px;
+    }
+    .checkbox {
+        margin-top: 0%;
+        margin-bottom: 3%;
+    }
+    .btns {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+    .btns .reset, .submit {
+        width: 30%;
+        margin: 0 1%;
+    }
+    .btns button {
+        border-radius: 4px;
+    }
+}

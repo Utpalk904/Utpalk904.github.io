@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div><h1>Speaker Submission</h1></div>
+        <div class="subhead">Want to speak at our fake conference? Fill out this form.</div>
+    </header>
+    <main>
+        <form action="" method="get">
+            <div class="name">
+                    <label for="user_name">Name</label>
+                    <input type="text" id="user_name" name="Name">
+            </div>
+            <div class="email">
+                    <label for="user_email">Email</label>
+                    <input type="email" name="Email" id="user_email" placeholder="you@example.com">
+            </div>
+            <div class="radiobtn">
+                <div class="radio-btn-head">
+                    Type of Talk
+                </div>
+                <div class="stagesel">
+                    <div>
+                        <input type="radio" name="select_stage" id="main_stage" value="main stage">
+                        <label for="main_stage">Main Stage</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="select_stage" id="workshop" value="workshop" checked>
+                        <label for="workshop">Workshop</label>
+                    </div>
+                </div>
+            </div>
+            <div class="select-menu">
+                <div class="label">
+                    <label for="tshirt_size">T-Shirt Size </label>
+                </div>
+                <div class="menu">
+                    <select name="Tshirt-size" id="tshirt_size">
+                        <option value="Extra-Small">Extra Small</option>
+                        <option value="Small">Small</option>
+                        <option value="Medium">Medium</option>
+                        <option value="Large">Large</option>
+                        <option value="Extra-Large">Extra Large</option>
+                    </select>
+                </div>
+            </div>
+            <div class="txt-area">
+                <div class="label">
+                    <label for="txt_title">Abstract</label>
+                </div>
+                <div class="text">
+                    <textarea name="content" id="txt-title" cols="30" rows="10">Describe your talk in 500 Words or less</textarea>
+                </div>
+            </div>
+            <div class="checkbox">
+                <div>
+                    <input type="checkbox" name="confirmation" id="confirm_check">
+                    <label for="confirm_check">I'm actually available on the day of the talk</label>
+                </div>
+            </div>
+            <div class="btns">
+                <div class="reset">
+                    <button type="reset">Reset</button>
+                </div>
+                <div class="submit">
+                    <button type="submit">Submit</button>
+                </div>
+            </div>
+        </form>
+    </main>
+</body>
+</html>
