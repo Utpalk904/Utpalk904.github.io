@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/home.css">
+</head>
+<body>
+    <div class="container">
+        <nav id="nav">
+            <button class="add_btn" id="add_btn">Add Books</button>
+            <button class="show_btn" id="show_btn">Show Books</button>
+            <button class="search_btn" id="search_btn">Search Books</button>
+        </nav>
+        <div class="add_books_section" id="add_books_section">
+            <div class="add_books_box">
+                <h1>Add a book</h1>
+                <label for="title">Title</label>
+                <input type="text" id="title" placeholder="Title of the Book">
+                <label for="author">Author</label>
+                <input type="text" id="author" placeholder="Author of the Book">
+                <label for="pgno">Page No.</label>
+                <input type="number" id="pgno" placeholder="Page Number">
+                <label for="genre">Genre</label>
+                <select name="genre" id="genre">
+                    <option value="Fiction">Fiction</option>
+                    <option value="Novel">Novel</option>
+                    <option value="Autobiography">Autobiography</option>
+                </select>
+                <button id="add_book_btn">Add Book</button>
+            </div>
+        </div>
+        <div class="show_books_section" id="show_books_section">
+            <h1>SHOW BOOKS</h1>
+        </div>
+        <div class="search_books_section" id="search_books_section">
+            <h1>SEARCH BOOKS</h1>
+        </div>
+    </div>
+</body>
+<script src="JS/script2.js"></script>
+</html>

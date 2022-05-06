@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+    height: 100vh;
+    width: 100%;
+}
+
+.container nav {
+    display: flex;
+    width: 100%;
+}
+
+.container nav button {
+    width: 33.333333%;
+    border: none;
+    color: #F6502E;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #FFF0ED;
+    font-size: 2.5rem;
+    padding: 1.5rem 0;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom: 2px solid #F6502E;
+}
+
+.container nav .add_btn {
+    filter: drop-shadow(0px 4px 4px rgba(226, 72, 72, 0.25));
+    background-color: #f2c7bf;
+}
+
+.container .show_books_section {
+    display: none;
+}
+
+.container .search_books_section {
+    display: none;
+}
+
+.container .add_books_section {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    width: 100%;
+}
+
+.container .show_books_section, .search_books_section {
+    width: 100%;
+}
+
+.container .add_books_section .add_books_box {
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    width: 50%;
+    background-color: #FFF0ED;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 4rem;
+    border-radius: 20px;
+}
+
+.container .add_books_section .add_books_box h1 {
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+.container .add_books_section .add_books_box label {
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-top: 2rem;
+    font-size: 1.5rem;
+}
+
+.container .add_books_section .add_books_box input {
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    margin-top: .5rem;
+    width: 100%;
+    border: none;
+    font-size: 1.3rem;
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+.container .add_books_section .add_books_box select {
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    margin-top: .5rem;
+    width: 100%;
+    border-radius: 1rem;
+    font-size: 1.3rem;
+    padding: 1rem;
+    border: none;
+}
+
+.container .add_books_section .add_books_box select:focus {
+    outline: 2px solid #F6502E;
+}
+
+.container .add_books_section .add_books_box input:focus {
+    outline: 2px solid #F6502E;
+}
+
+.container .add_books_section .add_books_box button {
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border: none;
+    background-color: #F6502E;
+    color: white;
+    border-radius: 1rem;
+    margin-top: 2rem;
+    font-size: 1.3rem;
+    padding: 1rem;
+}

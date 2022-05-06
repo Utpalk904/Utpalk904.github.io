@@ -1,0 +1,218 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+    position: absolute;
+    height: 100%;
+    min-height: 590px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.container .box1 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 66%;
+    height: 100%;
+    background-color: #F6502E;
+    border-bottom-right-radius: 40px;
+    border-top-right-radius: 40px;
+}
+
+.container .box1 .left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container .box1 .left img {
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.container .box1 .left p {
+    font-size: 4.5rem;
+    font-weight: 600;
+    color: white;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.container .box1 .right {
+    color: white;
+    text-align: center;
+}
+
+.container .box1 .right .head1 {
+    font-size: 2rem;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.container .box1 .right .head2 {
+    font-size: 3.4rem;
+    letter-spacing: 0.5rem;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.container .box2 {
+    width: 34%;
+    height: 100%;
+    padding: 2rem;
+}
+
+.container .box2 .login_box {
+    background-color: #FBF5F4;
+    height: 100%;
+    width: 100%;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 3rem;
+    padding-right: 2rem;
+}
+
+.container .box2 .login_box .part1{
+    margin-bottom: 3rem;
+}
+
+.container .box2 .login_box .welcome {
+    font-size: 3rem;
+    font-weight: 600;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.container .box2 .login_box .signin {
+    font-size: 0.9rem;
+    color: #707070;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.container .box2 .login_box .input {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    /* width: auto; */
+    margin: 1rem 0;
+    border: 2px solid black;
+    border-radius: 1rem;
+    padding: 10px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.container .box2 .login_box .input input {
+    border: none;
+    width: 100%;
+    font-size: 1.1rem;
+    margin-left: 0.5rem;
+}
+
+.container .box2 .login_box .input input:focus {
+    outline: none;
+}
+
+.container .box2 .login_box a {
+    margin-top: 1.5rem;
+    text-decoration: none;
+}
+
+.container .box2 .login_box button {
+    cursor: pointer;
+    border: none;
+    border-radius: 1rem;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    background-color: #F6502E;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    filter: drop-shadow(0px 4px 4px rgba(226, 72, 72, 0.25));
+}
+
+.container .box2 .login_box button img {
+    filter: drop-shadow(0px 4px 4px rgba(226, 72, 72, 0.25));
+}
+
+.container .box2 .login_box .forget_passwd {
+    font-size: 0.9rem;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-bottom: 3rem;
+}
+
+.container .box2 .login_box .new {
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-size: .9rem;
+    text-align: center;
+}
+
+.container .box2 .login_box .new .diffcolor {
+    text-shadow: 0px 4px 4px rgba(226, 72, 72, 0.25);
+    color: #F6502E;
+}
+
+@media screen and (max-width:1150px) {
+    .container .box1 {
+        width: 60%;
+    }
+
+    .container .box2 {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width:1100px) {
+    .container .box1 {
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+}
+
+@media screen and (max-width:990px) {
+    .container .box1 {
+        width: 55%;
+    }
+
+    .container .box2 {
+        width: 45%;
+    }
+}
+
+@media screen and (max-width:880px) {
+    .container .box1 {
+        width: 50%;
+    }
+
+    .container .box2 {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width:760px) {
+    .container {
+        display: block;
+        overflow: hidden;
+    }
+
+    .container .box1 {
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px;
+        width: 100%;
+    }
+
+    .container .box2 {
+        width: 100%;
+        margin: auto;
+    }
+}
