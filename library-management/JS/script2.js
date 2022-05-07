@@ -1,4 +1,8 @@
 
+// Calling Display() function:
+
+Display();
+
 let container=document.getElementById('container');
 let addBtn=document.getElementById('add_btn');
 let showBtn=document.getElementById('show_btn');
@@ -7,6 +11,11 @@ let searchBtn=document.getElementById('search_btn');
 let addSection=document.getElementById('add_books_section');
 let showSection=document.getElementById('show_books_section');
 let searchSection=document.getElementById('search_books_section');
+
+// Empty select tag
+
+let genre=document.getElementById('genreval');
+genre.selectedIndex=-1;
 
 // Event Listener when screen width is greater than 600px
 
@@ -39,7 +48,7 @@ if (container.offsetWidth>600){
     
     searchBtn.addEventListener('click',function(){
         addSection.style.display='none';
-        searchSection.style.display='block';
+        searchSection.style.display='flex';
         addBtn.style.backgroundColor='#FFF0ED';
         showBtn.style.backgroundColor='#FFF0ED';
         searchBtn.style.backgroundColor='#f2c7bf';
@@ -142,10 +151,289 @@ close.addEventListener('click',function(){
     nav.style.transition='1s';
 })
 
-/* <div class="card">
-                <div class="header3">Untitled</div>
-                <div class="notes">${element}</div>
-                <div class="delete_btn">
-                    <button id="${index}" onclick="deleteNote(this.id)">Delete Note</button>
-                </div>
-            </div> */
+// Object Constructor
+
+class Book{
+    constructor(title,author,pgn,genre){
+        this.Title=title,
+        this.Author=author,
+        this.Pgn=pgn,
+        this.Genre=genre
+    }
+};
+
+// Display Function
+
+function Display(){
+    let books=localStorage.getItem('books');
+    if (books==null){
+        booksArr=[];
+    }
+    else {
+        booksArr=JSON.parse(books);
+    };
+
+    let html='';
+    let html2='';       // for search section
+
+    booksArr.forEach(function(element,index){
+        html+=`<div class="card" id="card">
+                    <div class="title">Title : ${element.Title}</div>
+                    <div class="author">Author : ${element.Author}</div>
+                    <div class="pgno">PageNo : ${element.Pgn}</div>
+                    <div class="genre">Genre : ${element.Genre}</div>
+                    <div class="delete_btn" id=${index} onclick="deleteBook(this.id)">
+                        <button>Delete Book</button>
+                    </div>
+                </div>`;
+        html2+=`<div class="card" id="card">
+                    <div class="title">Title : ${element.Title}</div>
+                    <div class="author">Author : ${element.Author}</div>
+                    <div class="pgno">PageNo : ${element.Pgn}</div>
+                    <div class="genre">Genre : ${element.Genre}</div>
+                    <div class="delete_btn" id=${index} onclick="deleteBook(this.id)">
+                        <button>Delete Book</button>
+                    </div>
+                </div>`;
+    });
+
+    let booksCard=document.getElementById('books');
+    let searchCard=document.getElementById('search_card');
+
+    if (booksArr.length!=0){
+        booksCard.innerHTML=html;
+        searchCard.innerHTML=html2;     // Search section
+    }
+    else {
+        booksCard.innerHTML=`Nothing to Show! Use "Add Books" Section to Add a Book.`
+        searchCard.innerHTML=`Nothing to Show! Use "Add Books" Section to Add a Book.`
+    }
+
+    // Adding Event listener on All Button filter
+
+    let all=document.getElementById('all');
+    let fiction=document.getElementById('fiction');
+    let novel=document.getElementById('novel');
+    let autoBiography=document.getElementById('autobiography');
+
+    all.addEventListener('click',function(){
+        all.style.border='2px solid #F6502E';
+        all.style.backgroundColor='#f2c7bf';
+        fiction.style.border='none';
+        novel.style.border='none';
+        autoBiography.style.border='none';
+        fiction.style.backgroundColor='#FFF0ED';
+        novel.style.backgroundColor='#FFF0ED';
+        autoBiography.style.backgroundColor='#FFF0ED';
+        searchCard.style.display='flex';
+
+        let noResultTxt=document.getElementById('no_result_found_txt');
+        noResultTxt.style.display='none';
+
+        // Displaying All Cards that got hidden from other filter buttons
+
+        let card=searchSection.getElementsByClassName('card');
+    
+        Array.from(card).forEach(function(element){
+            let genreTxt=element.getElementsByClassName('genre')[0].innerText.toLowerCase();
+            if (genreTxt.includes('genre')){
+                element.style.display='flex';
+            }
+        });
+    });
+
+    // Adding Event Listener on 'Fiction' Button Filter
+
+    fiction.addEventListener('click',function(){
+        fiction.style.border='2px solid #F6502E';
+        fiction.style.backgroundColor='#f2c7bf';
+        all.style.border='none';
+        novel.style.border='none';
+        autoBiography.style.border='none';
+        all.style.backgroundColor='#FFF0ED';
+        novel.style.backgroundColor='#FFF0ED';
+        autoBiography.style.backgroundColor='#FFF0ED';
+
+        let card=searchSection.getElementsByClassName('card');
+        let count=0;
+        let totalCount=0;
+
+        Array.from(card).forEach(function(element){
+            let genreTxt=element.getElementsByClassName('genre')[0].innerText.toLowerCase();
+            if (genreTxt.includes('fiction')){
+                element.style.display='flex';
+                count+=1;
+                totalCount+=1;
+            }
+            else {
+                element.style.display='none';
+                totalCount+=1;
+            };
+        });
+        if (totalCount!=0) {
+            if (count==0) {
+                document.getElementById('no_result_found_txt').style.display='block';
+            }
+            else {
+                document.getElementById('no_result_found_txt').style.display='none';
+            }
+        };
+    });
+
+    novel.addEventListener('click',function(){
+        novel.style.border='2px solid #F6502E';
+        novel.style.backgroundColor='#f2c7bf';
+        all.style.border='none';
+        fiction.style.border='none';
+        autoBiography.style.border='none';
+        all.style.backgroundColor='#FFF0ED';
+        fiction.style.backgroundColor='#FFF0ED';
+        autoBiography.style.backgroundColor='#FFF0ED';
+
+        let card=searchSection.getElementsByClassName('card');
+        let count=0;
+        let totalCount=0;
+        Array.from(card).forEach(function(element){
+            let genreTxt=element.getElementsByClassName('genre')[0].innerText.toLowerCase();
+            if (genreTxt.includes('novel')){
+                element.style.display='flex';
+                count+=1;
+                totalCount+=1;
+            }
+            else {
+                element.style.display='none';
+                totalCount+=1;
+            };
+        });
+        if (totalCount!=0) {
+            if (count==0) {
+                document.getElementById('no_result_found_txt').style.display='block';
+            }
+            else {
+                document.getElementById('no_result_found_txt').style.display='none';
+            }
+        };
+    });
+
+    autoBiography.addEventListener('click',function(){
+        autoBiography.style.border='2px solid #F6502E';
+        autoBiography.style.backgroundColor='#f2c7bf';
+        all.style.border='none';
+        novel.style.border='none';
+        fiction.style.border='none';
+        all.style.backgroundColor='#FFF0ED';
+        novel.style.backgroundColor='#FFF0ED';
+        fiction.style.backgroundColor='#FFF0ED';
+
+        let card=searchSection.getElementsByClassName('card');
+        let count=0;
+        let totalCount=0;
+        Array.from(card).forEach(function(element){
+            let genreTxt=element.getElementsByClassName('genre')[0].innerText.toLowerCase();
+            if (genreTxt.includes('autobiography')){
+                element.style.display='flex';
+                count+=1;
+                totalCount+=1;
+            }
+            else {
+                element.style.display='none';
+                totalCount+=1;
+            };
+        });
+        if (totalCount!=0) {
+            if (count==0) {
+                document.getElementById('no_result_found_txt').style.display='block';
+            }
+            else {
+                document.getElementById('no_result_found_txt').style.display='none';
+            }
+        };
+    });
+};
+
+// Add methods to display prototype
+
+Display.prototype.clear=function(){
+    document.getElementById('titleval').value='';
+    document.getElementById('authorval').value='';
+    document.getElementById('pgnoval').value='';
+    let genre=document.getElementById('genreval');
+    genre.selectedIndex=-1;
+}
+
+// Click event listener on Add Book button
+
+let addBookBtn=document.getElementById('add_book_btn');
+
+addBookBtn.addEventListener('click',addBook);
+
+function addBook (){
+    let title=document.getElementById('titleval').value;
+    let author=document.getElementById('authorval').value;
+    let pgn=document.getElementById('pgnoval').value;
+    let genre=document.getElementById('genreval').value;
+    let books=localStorage.getItem('books');
+    if (books==null){
+        booksArr=[];
+    }
+    else {
+        booksArr=JSON.parse(books);
+    };
+
+    // Preventing Empty input
+
+    if (title!='' && author!='' && pgn!='' && genre!=''){
+        let book=new Book(title,author,pgn,genre);
+        console.log(book);
+        booksArr.push(book);
+        localStorage.setItem('books',JSON.stringify(booksArr));
+        let display=new Display();
+        display.clear();        // It calls the Display() function...
+        alert('Book Added Successfully');
+    }
+};
+
+// Searching Function
+
+let searchCard2=document.getElementById('search_card');
+search=document.getElementById('search');
+search.addEventListener('input',function(){
+    searchCard2.style.display='flex';
+    let searchInput=search.value.toLowerCase();
+    let searchCard=searchSection.getElementsByClassName('card');
+    let count=0;
+    let totalCount=0;
+    Array.from(searchCard).forEach(function(element){
+        let checkTitle=element.getElementsByClassName('title')[0].innerText.toLowerCase();
+        if (checkTitle.includes(searchInput)){
+            element.style.display='flex';
+            count+=1;
+            totalCount+=1;
+        }
+        else {
+            element.style.display='none';
+            totalCount+=1;
+        };
+    });
+    if (totalCount!=0) {
+        if (count==0) {
+            document.getElementById('no_result_found_txt').style.display='block';
+        }
+        else {
+            document.getElementById('no_result_found_txt').style.display='none';
+        }
+    };
+});
+
+// Delete Function
+
+function deleteBook(index){
+    let books=localStorage.getItem('books');
+    booksArr=JSON.parse(books);
+    booksArr.splice(index,1);
+    localStorage.setItem('books',JSON.stringify(booksArr));
+    Display();
+}
+
+
+let checkGenre=showSection.getElementsByClassName('genre');

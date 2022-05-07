@@ -34,13 +34,13 @@
             <div class="add_books_box">
                 <h1>Add a book</h1>
                 <label for="title">Title</label>
-                <input type="text" id="title" placeholder="Title of the Book">
+                <input type="text" id="titleval" placeholder="Title of the Book">
                 <label for="author">Author</label>
-                <input type="text" id="author" placeholder="Author of the Book">
+                <input type="text" id="authorval" placeholder="Author of the Book">
                 <label for="pgno">Page No.</label>
-                <input type="number" id="pgno" placeholder="Page Number">
+                <input type="number" id="pgnoval" placeholder="Page Number">
                 <label for="genre">Genre</label>
-                <select name="genre" id="genre">
+                <select name="genre" id="genreval">
                     <option value="Fiction">Fiction</option>
                     <option value="Novel">Novel</option>
                     <option value="Autobiography">Autobiography</option>
@@ -49,10 +49,24 @@
             </div>
         </div>
         <div class="show_books_section" id="show_books_section">
-            <h1>SHOW BOOKS</h1>
+            <h1>Your Books</h1>
+            <div class="books" id="books"></div>
         </div>
         <div class="search_books_section" id="search_books_section">
-            <h1>SEARCH BOOKS</h1>
+            <div class="search" id="search_block">
+                <input type="text" id="search" placeholder="Search for books...">
+                <label for="search"><i class="material-icons">search</i></label>
+            </div>
+            <div class="filter" id="filter">
+                <button id="all">All</button>
+                <button id="fiction">Fiction</button>
+                <button id="novel">Novel</button>
+                <button id="autobiography">Autobiography</button>
+            </div>
+            <div id="search_card" class="books"></div>
+            <div class="no_result_found_txt" id="no_result_found_txt">
+                No Result Found :(
+            </div>
         </div>
     </div>
 </body>
