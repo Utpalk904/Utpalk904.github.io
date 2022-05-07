@@ -57,36 +57,42 @@ else {
     addBtn.addEventListener('click',function(){
         showSection.style.display='none';
         searchSection.style.display='none';
-        mobNav.style.position='relative';
         mobNav.style.transform='translateX(0)';
         mobNav.style.transition='0s';
-        nav.style.position='absolute';
         nav.style.transform='translateX(-100vw)';
         nav.style.transition='0s';
+        addSection.style.transform='translateX(0)';
+        // showSection.style.transform='translateX(100vw)';
+        // searchSection.style.transform='translateX(100vw)';
+        addSection.style.transition='0s';
         addSection.style.display='flex';
     });
 
     showBtn.addEventListener('click',function(){
+        showSection.style.display='block';
         addSection.style.display='none';
         searchSection.style.display='none';
-        mobNav.style.position='relative';
         mobNav.style.transform='translateX(0)';
         mobNav.style.transition='0s';
-        nav.style.position='absolute';
         nav.style.transform='translateX(-100vw)';
         nav.style.transition='0s';
-        showSection.style.display='block';
+        // addSection.style.transform='translateX(100vw)';
+        showSection.style.transform='translateX(0)';
+        // searchSection.style.transform='translateX(100vw)';
+        showSection.style.transition='0s 1s';
     });
 
     searchBtn.addEventListener('click',function(){
         addSection.style.display='none';
         showSection.style.display='none';
-        mobNav.style.position='relative';
         mobNav.style.transform='translateX(0)';
         mobNav.style.transition='0s';
-        nav.style.position='absolute';
         nav.style.transform='translateX(-100vw)';
         nav.style.transition='0s';
+        // addSection.style.transform='translateX(100vw)';
+        // showSection.style.transform='translateX(100vw)';
+        searchSection.style.transform='translateX(0)';
+        searchSection.style.transition='0s';
         searchSection.style.display='block';
     });
 };
@@ -99,19 +105,39 @@ let nav=document.getElementById('nav');
 let mobNav=document.getElementById('mob_nav');
 
 menuIcon.addEventListener('click', function(){
-    mobNav.style.position='absolute';
     mobNav.style.transform='translateX(100vw)';
-    mobNav.style.transition='1s';
-    nav.style.position='relative';
+    if (addSection.style.display!='none'){
+        addSection.style.transform='translateX(100vw)';
+        addSection.style.transition='1s';
+    }
+    else if(showSection.style.display!='none') {
+        showSection.style.transform='translateX(100vw)';
+        showSection.style.transition='1s';
+    }
+    else if (searchSection.style.display!='none') {
+        searchSection.style.transform='translateX(100vw)';
+        searchSection.style.transition='1s';
+    }
     nav.style.transform='translateX(0)';
     nav.style.transition='1s';
+    mobNav.style.transition='1s';
 });
 
 close.addEventListener('click',function(){
-    mobNav.style.position='relative';
     mobNav.style.transform='translateX(0)';
+    if (addSection.style.display!='none'){
+        addSection.style.transform='translateX(0)';
+        addSection.style.transition='1s';
+    }
+    else if(showSection.style.display!='none') {
+        showSection.style.transform='translateX(0)';
+        showSection.style.transition='1s';
+    }
+    else if (searchSection.style.display!='none') {
+        searchSection.style.transform='translateX(0)';
+        searchSection.style.transition='1s';
+    }
     mobNav.style.transition='1s';
-    nav.style.position='absolute';
     nav.style.transform='translateX(-100vw)';
     nav.style.transition='1s';
 })

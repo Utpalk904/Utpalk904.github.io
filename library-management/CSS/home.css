@@ -12,6 +12,7 @@ html {
 .container {
     height: 100vh;
     width: 100%;
+    overflow-x: hidden;
 }
 
 .container nav {
@@ -71,14 +72,6 @@ html {
     background-color: #f2c7bf;
 }
 
-.container .show_books_section {
-    display: none;
-}
-
-.container .search_books_section {
-    display: none;
-}
-
 .container .add_books_section {
     display: flex;
     justify-content: center;
@@ -89,6 +82,7 @@ html {
 
 .container .show_books_section, .search_books_section {
     width: 100%;
+    display: none;
 }
 
 .container .add_books_section .add_books_box {
@@ -178,7 +172,6 @@ html {
 @media screen and (max-width:600px) {
     .container .nav {
         flex-direction: column;
-        /* display: none; */
         align-items: center;
         justify-content: center;
         position: absolute;
@@ -216,7 +209,14 @@ html {
         border-top: 2px solid #F6502E;
     }
 
-    .container .add_books_section {
-        display: none;
+    .container .add_books_section .add_books_box {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .container .mob_nav {
+        font-size: 1.8rem;
+        padding: 1.8rem 1.2rem;
     }
 }
