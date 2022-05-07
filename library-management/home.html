@@ -13,8 +13,19 @@
     <link rel="stylesheet" href="CSS/home.css">
 </head>
 <body>
-    <div class="container">
-        <nav id="nav">
+    <div class="container" id="container">
+        <nav class="mob_nav" id="mob_nav">
+            <div class="menu_icon" id="menu_icon">
+               <i class="material-icons">menu</i> 
+            </div>
+            <div class="libname">
+                Fennec's Library
+            </div>
+        </nav>
+        <nav id="nav" class="nav">
+            <div class="close">
+                <i class="material-icons" id="close">close</i>
+            </div>
             <button class="add_btn" id="add_btn">Add Books</button>
             <button class="show_btn" id="show_btn">Show Books</button>
             <button class="search_btn" id="search_btn">Search Books</button>

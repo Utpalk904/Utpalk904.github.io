@@ -19,7 +19,41 @@ html {
     width: 100%;
 }
 
-.container nav button {
+.container .nav .close {
+    display: none;
+    text-align: right;
+    padding: 0 1rem;
+    cursor: pointer;
+    padding-top: 1rem;
+    background-color: #FFF0ED;
+    color: #F6502E;
+}
+
+.container .mob_nav {
+    display: none;
+    background-color: #FFF0ED;
+    color: #F6502E;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-weight: 600;
+    padding: 2rem;
+    font-size: 2rem;
+}
+
+.container .mob_nav .menu_icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1.5px solid #F6502E;
+    border-radius: 5px;
+    padding: 0.2rem;
+    cursor: pointer;
+}
+
+.container .mob_nav .menu_icon:hover {
+    background-color: #f2c7bf;
+}
+
+.container .nav button {
     width: 33.333333%;
     border: none;
     color: #F6502E;
@@ -32,7 +66,7 @@ html {
     border-bottom: 2px solid #F6502E;
 }
 
-.container nav .add_btn {
+.container .nav .add_btn {
     filter: drop-shadow(0px 4px 4px rgba(226, 72, 72, 0.25));
     background-color: #f2c7bf;
 }
@@ -48,7 +82,8 @@ html {
 .container .add_books_section {
     display: flex;
     justify-content: center;
-    margin-top: 2rem;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
     width: 100%;
 }
 
@@ -96,6 +131,7 @@ html {
     font-size: 1.3rem;
     padding: 1rem;
     border: none;
+    background-color: white;
 }
 
 .container .add_books_section .add_books_box select:focus {
@@ -115,4 +151,72 @@ html {
     margin-top: 2rem;
     font-size: 1.3rem;
     padding: 1rem;
+}
+
+@media screen and (max-width:1200px) {
+    .container .add_books_section .add_books_box {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width:860px) {
+    .container .nav button {
+        font-size: 2rem;
+    }
+
+    .container .add_books_section .add_books_box {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width:650px) {
+    .container .nav button {
+        font-size: 1.8rem;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .container .nav {
+        flex-direction: column;
+        /* display: none; */
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        transform: translateX(-100vw);
+        top: 0;
+        height: 100%;
+        background-color: #FFF0ED;
+    }
+
+    .container .nav .close {
+        display: block;
+        position: absolute;
+        align-self: flex-end;
+        top: 0;
+    }
+
+    .container .mob_nav {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .container .nav button {
+        width: 100%;
+        font-size: 2rem;
+        padding: 1.5rem 0;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    .container .nav .add_btn {
+        filter: none;
+        background-color: #FFF0ED;
+        border-top: 2px solid #F6502E;
+    }
+
+    .container .add_books_section {
+        display: none;
+    }
 }
