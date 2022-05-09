@@ -15,6 +15,26 @@ html {
     overflow-x: hidden;
 }
 
+.alert_msg_box {
+    position: sticky;
+    top: 0;
+    background-color: #d1e7dd;
+    color: #0f5132;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 8%;
+    z-index: 2;
+    display: none;
+}
+
+.alert_msg_box i {
+    position: absolute;
+    right: 1.5rem;
+    cursor: pointer;
+}
+
 .container nav {
     display: flex;
     width: 100%;

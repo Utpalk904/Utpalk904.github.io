@@ -3,6 +3,17 @@
 
 Display();
 
+// Closing Alert Message
+
+let alertClose=document.getElementById('alert_close');
+let alertMsg=document.getElementById('alert_msg_box');
+
+alertClose.addEventListener('click',function(){
+   alertMsg.style.display='none'; 
+});
+
+//
+
 let container=document.getElementById('container');
 let addBtn=document.getElementById('add_btn');
 let showBtn=document.getElementById('show_btn');
@@ -388,8 +399,11 @@ function addBook (){
         booksArr.push(book);
         localStorage.setItem('books',JSON.stringify(booksArr));
         let display=new Display();
+        alertMsg.style.display='flex';
+        setTimeout(() => {
+            alertMsg.style.display='none';
+        }, 3000);
         display.clear();        // It calls the Display() function...
-        alert('Book Added Successfully');
     }
 };
 
