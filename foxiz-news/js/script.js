@@ -153,7 +153,7 @@ moon.addEventListener('click',function(){
 let apiKey2='d9bcba0834f7f8e18409e7bc2924fb7c';
 let loc='new delhi';
 let url=`http://api.openweathermap.org/data/2.5/weather?q=${loc}&APPID=${apiKey2}`;
-fetch(url).then(response=> response.json())
+response=fetch(url).then(response=> response.json())
 .then(data=>{
     let cityName=data.name;
     let clouds=data.clouds.all;
