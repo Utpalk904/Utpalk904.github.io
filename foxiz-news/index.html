@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foxiz News</title>
+    <link rel="shortcut icon" href="assets/favicon.webp" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav id="nav" class="navbar">
+        <div class="nav nav_left" id="nav_left">
+            <img src="assets/menu-icon-dark.svg" alt="menu-icon" class="menu_icon dark_menu" id="dark_menu">
+            <img src="assets/menu-icon-light.svg" alt="menu-icon" class="menu_icon light_menu" id="light_menu">
+            <img src="assets/logo.svg" alt="logo" id="dark_logo" class="logo">
+            <img src="assets/logo-light.svg" alt="logo" id="light_logo" class="logo">
+            <span class="tab">
+                <span class="home link">Home</span>
+                <span class="icons"><i class="material-icons">keyboard_arrow_down</i></span>
+            </span>
+            <span class="tab">
+                <span class="poltics link">Politics</span>
+                <span class="icons"><i class="material-icons">keyboard_arrow_down</i></span>
+            </span>
+            <span class="tab">
+                <span class="tech link">Technology</span>
+                <span class="icons"><i class="material-icons">keyboard_arrow_down</i></span>
+            </span>
+            <span class="tab">
+                <span class="post link">Posts</span>
+                <span class="icons"><i class="material-icons">keyboard_arrow_down</i></span>
+            </span>
+            <span class="tab">
+                <span class="page link">Pages</span>
+                <span class="icons"><i class="material-icons">keyboard_arrow_down</i></span>
+            </span>
+        </div>
+        <div class="nav nav_right" id="nav_right">
+            <button>Sign In</button>
+            <span class="icons"><i class="material-icons">notifications_none</i></span>
+            <span class="icons"><i class="material-icons">search</i></span>
+            <span class="separate">|</span>
+            <span class="light" id="light"><i class="fa fa-sun-o"></i></span>
+            <span class="dark" id="dark"><i class="fa fa-moon-o"></i></span>
+        </div>
+    </nav>
+    <div class="quicklinks" id="quicklinks">
+        <button><i class="material-icons">whatshot</i>Hot News</button>
+    </div>
+    <div class="container" id="container">
+        <div class="news" id="news"></div>
+        <div class="weather_section" id="weather"></div>
+    </div>
+    <footer class="footer" id="footer">
+        <div class="newsletter">
+            <div class="footer_subs">Sign Up for Our Newsletter</div>
+            <div class="footer_txt">Subscribe to our newsletter to get our newest articles instantly!</div>
+            <div class="footer_input"><input type="email" name="subscribe" id="subscribe" placeholder="Your email address"><label for="subscribe"><button>Sign Up Now</button></label></div>
+            <div class="terms"><input type="checkbox" name="terms" id="terms"><label for="terms">I have read and agree to the terms & conditions</label></div>
+        </div>
+        <hr>
+        <div class="footer_end">
+            <div class="copyright">© 2022 Foxiz News Network. Ruby Design Company. All Rights Reserved.</div>
+            <div class="follow">
+                Follow ME | <a href="https://github.com/Utpalk904" class="fa fa-github" target='_blank'></a><a href="http://www.linkedin.com/in/utpal-kumar-3047561b6/" class="fa fa-linkedin" target='_blank'></a><a href="https://www.instagram.com/utpalk904/" class="fa fa-instagram" target='_blank'></a>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="js/script.js"></script>
+</html>
