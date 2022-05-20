@@ -2,42 +2,60 @@ console.log(`Welcome to Foxiz News`);
 
 let apiKey='003f23e826974bba9f597241645e72a5';
 let source='bbc-news';
+let url2=`https://newsapi.org/v2/top-headlines?sources=${source}&apiKey=${apiKey}`;
 
 let newsBox=document.getElementById('news');
 let weatherBox=document.getElementById('weather');
 
-// News Api Using ajax
 
-let xhr=new XMLHttpRequest();
-
-xhr.open('GET',`https://newsapi.org/v2/top-headlines?sources=${source}&apiKey=${apiKey}`,true);
-// xhr.open('GET',`https://newsapi.org/v2/top-headlines?country=in&apiKey=${apiKey}`,true);
-
-xhr.getResponseHeader('Content-Type','application/json');
-
-xhr.onload=function(){
-    if (this.status===200){
-        let obj=(JSON.parse(this.responseText));
-        let articles=obj.articles;
-        let html='';
-        articles.forEach(function(element){
-            html+=
+fetch(url2).then(response=>response.json())
+.then(data=>{
+    let articles=data.articles;
+    let html='';
+    articles.forEach(function(element){
+        html+=
             `<div class="card_news">
                 <div class="headline"><b>Headline : </b>${element.title}</div>
                 <div><img src="${element.urlToImage}" alt="${element.source}"></div>
                 <div class="description">${element.description}</div>
                 <div class="readmore"><a href="${element.url}" target="_blank">Read More</a></div>
-            </div>`
-        });
-        newsBox.innerHTML=html;
-    }
-    else {
-        newsBox.innerHTML=`<div> 404 :( </div>
-        <div> Page Not Found </div>`
-    }
-};
+            </div>`;
+    });
+    newsBox.innerHTML=html;
+});
 
-xhr.send();
+// News Api Using ajax
+
+// let xhr=new XMLHttpRequest();
+
+// xhr.open('GET',`https://newsapi.org/v2/top-headlines?sources=${source}&apiKey=${apiKey}`,true);
+// // xhr.open('GET',`https://newsapi.org/v2/top-headlines?country=in&apiKey=${apiKey}`,true);
+
+// xhr.getResponseHeader('Content-Type','application/json');
+
+// xhr.onload=function(){
+//     if (this.status===200){
+//         let obj=(JSON.parse(this.responseText));
+//         let articles=obj.articles;
+//         let html='';
+//         articles.forEach(function(element){
+//             html+=
+//             `<div class="card_news">
+//                 <div class="headline"><b>Headline : </b>${element.title}</div>
+//                 <div><img src="${element.urlToImage}" alt="${element.source}"></div>
+//                 <div class="description">${element.description}</div>
+//                 <div class="readmore"><a href="${element.url}" target="_blank">Read More</a></div>
+//             </div>`
+//         });
+//         newsBox.innerHTML=html;
+//     }
+//     else {
+//         newsBox.innerHTML=`<div> 404 :( </div>
+//         <div> Page Not Found </div>`
+//     }
+// };
+
+// xhr.send();
 
 // Selecting elements for making theme toggle
 
@@ -153,7 +171,7 @@ moon.addEventListener('click',function(){
 let apiKey2='d9bcba0834f7f8e18409e7bc2924fb7c';
 let loc='new delhi';
 let url=`https://api.openweathermap.org/data/2.5/weather?q=${loc}&APPID=${apiKey2}`;
-response=fetch(url).then(response=> response.json())
+fetch(url).then(response=> response.json())
 .then(data=>{
     let cityName=data.name;
     let clouds=data.clouds.all;
