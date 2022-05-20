@@ -152,7 +152,7 @@ moon.addEventListener('click',function(){
 
 let apiKey2='d9bcba0834f7f8e18409e7bc2924fb7c';
 let loc='new delhi';
-let url=`http://api.openweathermap.org/data/2.5/weather?q=${loc}&APPID=${apiKey2}`;
+let url=`https://api.openweathermap.org/data/2.5/weather?q=${loc}&APPID=${apiKey2}`;
 response=fetch(url).then(response=> response.json())
 .then(data=>{
     let cityName=data.name;
@@ -183,7 +183,7 @@ response=fetch(url).then(response=> response.json())
                 <div class="main_weather">${weather}</div>
             </div>
             <div class=weather_icon>
-                <div class="weather_icon"><img src='http://openweathermap.org/img/wn/${weatherIcon}.png' alt="icon"></div>
+                <div class="weather_icon"><img src='https://openweathermap.org/img/wn/${weatherIcon}.png' alt="icon"></div>
             </div>
         </div>
         <div class="sun_rise_set">
