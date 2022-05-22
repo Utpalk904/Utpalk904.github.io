@@ -67,7 +67,7 @@ function showNotes(){
             html+=`
             <div class="card">
                 <div class="header3">Untitled</div>
-                <div class="notes">${element}</div>
+                <div class="notes"><pre>${element}</pre></div>
                 <div class="delete_btn">
                     <button id="${index}" onclick="deleteNote(this.id)">Delete Note</button>
                 </div>
@@ -76,8 +76,8 @@ function showNotes(){
         else {
             html+=`
             <div class="card">
-                <div class="header3">${titleArr[index]}</div>
-                <div class="notes">${element}</div>
+                <div class="header3"><pre>${titleArr[index]}</pre></div>
+                <div class="notes"><pre>${element}</pre></div>
                 <div class="delete_btn">
                     <button id="${index}" onclick="deleteNote(this.id)">Delete Note</button>
                 </div>
