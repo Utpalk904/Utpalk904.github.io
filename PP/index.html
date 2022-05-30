@@ -14,6 +14,10 @@
         .container {
             position: relative;
         }
+        img {
+            width: 400px;
+            height: 400px;
+        }
         .lightbox {
             top: 0;
             z-index: 2;
@@ -74,7 +78,7 @@
 
 <script>
     let container=document.getElementById('container');
-    let arr=["slide1.jpg","slide2.jpg","slide3.jpg"];
+    let arr=["https://upload.wikimedia.org/wikipedia/commons/c/cc/Grey_squirrel_400px.jpg","https://www.pngkey.com/png/detail/350-3505674_apple-fruit-icon-400-x-400px.png","https://images.all-free-download.com/images/graphiclarge/boulder_creek_forest_lake_landscape_moss_nature_600401.jpg","https://images.all-free-download.com/images/graphiclarge/canyon_desert_forest_hill_landscape_mountain_nature_600620.jpg","https://topofthelist.net/wp-content/uploads/2016/01/Hydrangeas.jpg","https://24rdmo160xr11sgco31bxj30-wpengine.netdna-ssl.com/wp-content/uploads/2020/04/clement-fusil-Fpqx6GGXfXs-unsplash-400px.jpg","https://www.researchgate.net/profile/Ana-Belen-Petro/publication/221121660/figure/fig1/AS:393937056485384@1470933321643/Top-original-image-600-400-pixels-Bottom-two-representations-of-the-original_Q640.jpg","https://www.goldeneagleluxurytrains.com/img2/2022-01-24-09-43-03-Nude-Skincare-Product-Instagram-Story-(Instagram-Post)-(400-%C3%97-400px).png","https://visme.co/blog/wp-content/uploads/2020/09/2-3.jpg"];
 
     let containerHtml='';
     arr.forEach(function(element,index){
