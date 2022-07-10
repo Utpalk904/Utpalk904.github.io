@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .frame {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            height: 319.626px;
+            margin: auto;
+        }
+        img {
+            width: 400px;
+            margin: 5px 0;
+        }
+
+        .img {
+            width: 140px;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+        }
+        .box1 {
+            border-right: 5px solid white;
+            /* width: 400px; */
+        }
+        .box2 {
+            border-right: 5px solid white;
+        }
+        .box1:hover, .box2:hover, .box3:hover {
+            width: 400px;
+            transition: .5s;
+        }
+        .box1:hover~.box2:hover {
+            transition: 0.5s;
+        }
+    </style>
+</head>
+<body>
+    <div class="frame" id="frame">
+        <div class="img box1" id="img_box1">
+            <img src="https://www.finalsitesupport.com/hc/article_attachments/360000650392/800x600.png" alt="temp" class="one" id="one">
+        </div>
+        <div class="img box2" id="img_box2">
+            <img src="https://www.finalsitesupport.com/hc/article_attachments/360000650392/800x600.png" alt="temp" class="two" id="two">
+        </div>
+        <div class="img box3" id="img_box3">
+            <img src="https://www.finalsitesupport.com/hc/article_attachments/360000650392/800x600.png" alt="temp" class="three" id="three">
+        </div>
+    </div>
+</body>
+<script>
+    let box1=document.getElementById('img_box1');
+    let box2=document.getElementById('img_box2');
+    let box3=document.getElementById('img_box3');
+
+    box1.addEventListener('mouseover',()=>{
+        box1.style.width='400px';
+        box2.style.width='140px';
+        box3.style.width='140px';
+        box2.style.transition='0.5s';
+        box3.style.transition='0.5s';
+
+        box1.addEventListener('mouseout',()=>{
+            box3.style.width='140px';
+            box1.style.width='140px';
+            box2.style.width='140px';
+            box1.style.transition='0.5s';
+            box3.style.transition='0.5s';
+            box2.style.transition='0.5s';
+        });
+    });
+    box2.addEventListener('mouseover',()=>{
+        box2.style.width='400px';
+        box3.style.width='140px';
+        box1.style.width='140px';
+        box1.style.transition='0.5s';
+        box3.style.transition='0.5s';
+
+        box2.addEventListener('mouseout',()=>{
+            box3.style.width='140px';
+            box1.style.width='140px';
+            box2.style.width='140px';
+            box1.style.transition='0.5s';
+            box3.style.transition='0.5s';
+            box2.style.transition='0.5s';
+        });
+    });
+    box3.addEventListener('mouseover',()=>{
+        box3.style.width='400px';
+        box1.style.width='140px';
+        box2.style.width='140px';
+        box1.style.transition='0.5s';
+        box2.style.transition='0.5s';
+
+        box3.addEventListener('mouseout',()=>{
+            box3.style.width='140px';
+            box1.style.width='140px';
+            box2.style.width='140px';
+            box1.style.transition='0.5s';
+            box3.style.transition='0.5s';
+            box2.style.transition='0.5s';
+        });
+    });
+</script>
+</html>

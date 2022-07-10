@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
+    <link rel="icon" type="image" href="https://yt3.ggpht.com/ljpMPa4UuzF-SAFmfosyHiaaalAzOBcJSnyh2LZX4ZFQsE_8WltzJMn8oREssik5yauaQzrubw=s900-c-k-c0x00ffffff-no-rj">
+    <title>My Hobbies</title>
+    <style>
+        body {
+            margin: 0%;
+            /* background-image: linear-gradient(to right, #30cfd0, #330867); */
+            background-image: linear-gradient(to right, #d4fc79, #96e6a1);
+        }
+        *:not(#fa1,#fa2,#fa3,#fa4) {
+            box-sizing: border-box;
+        }
+        .navbar {
+            width: 100%;
+            /* background-color: rgb(30, 136, 87); */
+            /* background-image: linear-gradient(to right,#ff9a9e, #fad0c4); */
+            /* background-image: linear-gradient(to right,#a18cd1, #fbc2eb); */
+            /* background-image: linear-gradient(to right, #30cfd0, #330867); */
+            background-image: linear-gradient(to right, #d4fc79, #96e6a1);
+            overflow: auto;
+            position: fixed;
+            top: 0%;
+            left: 0%;
+            
+        }
+        .navbar a:not(#nav1) {
+            float: right;
+            padding: 40px 18px;
+            color: white;
+            text-decoration: none;
+            font-size: 40px;
+            font-family: monospace;
+        }
+        .navbar a:hover:not(#nav1) {
+            background-color: rgba(154, 185, 211, 0.719);
+        }
+        #nav1 {
+            float: left;
+            color: white;
+            text-decoration: none;
+            font-size: 40px;
+            padding: 40px 10px;
+            font-family: monospace;
+        }
+        @media screen and (max-width: 500px) {
+            .navbar a {
+                float: none;
+                display: block;
+                width: 100%;
+            }
+        }
+
+        .row {
+            margin-top: 200px;
+        }
+        .column {
+            float: left;
+            width: 33%;
+            padding: 5px;
+            /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+        }
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+        @media screen and (max-width: 500px) {
+            .column {
+                width: 100%;
+            }
+        }
+        #hpic {
+            /* background-color: rgb(199, 159, 202);*/
+            /* background-image: linear-gradient(to right, #f5f7fa,#c3cfe2); */
+            /* margin-left: 28%; */
+            max-width: 100%;
+            border-radius: 50%;
+            padding: 30px 12px;
+            cursor: pointer;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        } 
+        .text {
+            text-align: center;
+            font-size: 30px;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+        }
+
+        footer {
+            /* background-image: linear-gradient(to right, #a18cd1, #fbc2eb); */
+            /* background-image: linear-gradient(to right, #30cfd0, #330867); */
+            background-image: linear-gradient(to right, #d4fc79, #96e6a1);
+            width: 100%;
+            color: black;
+            padding: 0vw;
+            margin-top: 11vw;
+            box-sizing: border-box;
+        }
+        .footer {
+            text-align: center;
+            /* background-image: linear-gradient(to bottom right, #f5f7fa, #c3cfe2); */
+            padding: 10px 10px;
+        }
+        #logo {
+            border-radius: 50%;
+            max-width: 8%;
+        }
+        h3 {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        /* img {
+            border-radius: 50%;
+            max-width: 8%;
+        } */
+        #fa1, #fa2, #fa3, #fa4 {
+            border-radius: 50%;
+            text-decoration: none;
+            font-size: 25px;
+            padding: 19px;
+            width: 28px;
+            margin: 5px 2px;
+            color: white;
+        }
+        #fa1:hover, #fa2:hover, #fa3:hover, #fa4:hover {
+            opacity: 0.6;
+        }
+        #fa1 {
+            background: #056b94;
+        }
+        #fa2 {
+            background: #b6133c;
+        }
+        #fa3 {
+            background: #0d5977;
+        }
+        #fa4 {
+            background: #269cca;
+        }
+
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html" id="nav1"><i class="fa fa-fw fa-angellist"></i>Utpal Kumar</a>
+        <a href="Skills.html" id="nav4"><i class="fa fa-fw fa-code"></i>Skills</a>
+        <a href="Hobbies.html" id="nav3"><i class="fa fa-fw fa-gamepad"></i>My Hobbies</a>
+        <a href="index.html" id="nav2"><i class="fa fa-fw fa-home"></i>Home</a>
+    </div>
+    <div class="row">
+        <div class="column">
+            <img src="code.png" alt="He Likes to Code" id="hpic">
+            <div class="text">
+                Programming
+            </div>
+        </div>
+        <div class="column">
+            <img src="pslogo.jpg" alt="He Loves Gaming" id="hpic">
+            <div class="text">
+                Gaming
+            </div>
+        </div>
+        <div class="column">
+            <img src="netflix-logo.jpg" alt="Yup He likes to Watche Movies and Webseries as well" id="hpic">
+            <div class="text">
+                Netflix and Chill
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer">
+            <hr>
+            <img src="gdsc.jpg" alt="GDSC Logo" id="logo">
+            <h3>Google Developer Student Clubs</h3>
+            <a href="" class="fa fa-facebook" id="fa3"></a>
+            <a href="" class="fa fa-twitter" id="fa4"></a>
+            <a href="http://www.linkedin.com/in/utpal-kumar-3047561b6/" class="fa fa-linkedin" id="fa1" target="_blank"></a>
+            <a href="https://www.instagram.com/utpalk904/" class="fa fa-instagram" id="fa2" target="_blank"></a>
+        </div>
+    </footer>
+</body>
+</html>

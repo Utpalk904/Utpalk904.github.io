@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
+    <link rel="icon" type="image" href="https://yt3.ggpht.com/ljpMPa4UuzF-SAFmfosyHiaaalAzOBcJSnyh2LZX4ZFQsE_8WltzJMn8oREssik5yauaQzrubw=s900-c-k-c0x00ffffff-no-rj">
+    <title>Skills</title>
+    <style>
+        body {
+            margin: 0%;
+            /* background-image: linear-gradient(to bottom right, #30cfd0 ,#330867); */
+            /* background-image: linear-gradient(to bottom right, #fddb92, #d1fdff); */
+            /* background-image: linear-gradient(to bottom right, #89f7fe, #66a6ff); */
+            /* background-image: linear-gradient(to bottom right, #9890e3, #b1f4cf); */
+            background-image: linear-gradient(to right,#a18cd1, #fbc2eb);
+        }
+        /* #profile {
+            border-radius: 50%;
+            vertical-align: middle;
+            max-width: 5%;
+        } */
+        .navbar {
+            width: 100%;
+            /* background-color: rgb(235, 81, 10); */
+            background-image: linear-gradient(to right,#a18cd1, #fbc2eb);
+            overflow: auto;
+            position: fixed;
+            top: 0%;
+            left: 0%;
+            
+        }
+        .navbar a:not(#nav1) {
+            float: right;
+            padding: 40px 18px;
+            color: white;
+            text-decoration: none;
+            font-size: 40px;
+            font-family: monospace;
+        }
+        .navbar a:hover:not(#nav1) {
+            /* background-color: rgba(161, 153, 97, 0.719); */
+            background-color: rgba(220, 136, 223, 0.719);
+        }
+        #nav1 {
+            float: left;
+            color: white;
+            text-decoration: none;
+            font-size: 40px;
+            padding: 40px 10px;
+            font-family: monospace;
+        }
+        @media screen and (max-width: 500px) {
+            .navbar a {
+                float: none;
+                display: block;
+                width: 100%;
+            }
+        }
+
+        h1 {
+            text-align: center;
+            font-family: 'Oswald', sans-serif;
+            font-size: 50px;
+            color: black;
+        }
+        .pbar {
+            margin-top: 15vw;
+            margin-left: 20%;
+            margin-right: 20%;
+        }
+        #name {
+            font-size: 20px;
+            font-family: monospace;
+            font-weight: bold;
+        }
+        .bar {
+            width: 100%;
+            background-color: darkgray;
+            border-radius: 15px;
+        }
+        .html {
+            text-align: right;
+            width: 85%;
+            background-color: darkred;
+            padding: 10px;
+            border-radius: 15px;
+            color: white;
+        }
+        .css {
+            text-align: right;
+            width: 70%;
+            background-color: green;
+            padding: 10px;
+            border-radius: 15px;
+            color: white;
+        }
+        .js {
+            text-align: right;
+            width: 20%;
+            background-color: blue;
+            padding: 10px;
+            border-radius: 15px;
+            color: white;
+        }
+        .python {
+            text-align: right;
+            width: 65%;
+            background-color: rgb(177, 177, 23);
+            padding: 10px;
+            border-radius: 15px;
+            color: white;
+        }
+        .cpp {
+            text-align: right;
+            width: 50%;
+            background-color: rgb(168, 108, 168);
+            padding: 10px;
+            border-radius: 15px;
+            color: white;
+        }
+
+        footer {
+            /* background: rgb(211, 70, 14); */
+            background-image: linear-gradient(to right,#a18cd1, #fbc2eb);
+            width: 100%;
+            color: black;
+            padding: 0vw;
+            margin-top: 7vw;
+            box-sizing: border-box;
+        }
+        .footer {
+            text-align: center;
+            /* background-image: linear-gradient(to bottom right, #f5f7fa, #c3cfe2); */
+            padding: 10px 10px;
+        }
+        img {
+            border-radius: 50%;
+            max-width: 8%;
+        }
+        h3 {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        #fa1, #fa2, #fa3, #fa4 {
+            border-radius: 50%;
+            text-decoration: none;
+            font-size: 25px;
+            padding: 19px;
+            width: 28px;
+            margin: 5px 2px;
+            color: white;
+        }
+        #fa1:hover, #fa2:hover, #fa3:hover, #fa4:hover {
+            opacity: 0.6;
+        }
+        #fa1 {
+            background: #056b94;
+        }
+        #fa2 {
+            background: #b6133c;
+        }
+        #fa3 {
+            background: #0d5977;
+        }
+        #fa4 {
+            background: #269cca;
+        }
+
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html" id="nav1"><i class="fa fa-fw fa-angellist"></i>Utpal Kumar</a>
+        <a href="Skills.html" id="nav4"><i class="fa fa-fw fa-code"></i>Skills</a>
+        <a href="Hobbies.html" id="nav3"><i class="fa fa-fw fa-gamepad"></i>My Hobbies</a>
+        <a href="index.html" id="nav2"><i class="fa fa-fw fa-home"></i>Home</a>
+    </div>
+    <div class="pbar">
+        <h1>My Skills</h1>
+        <p id="name"><i class="fa fa-fw fa-html5"></i>HTML</p>
+        <div class="bar">
+            <div class="html">
+                85%
+            </div>
+        </div>
+        <p id="name"><i class="fa fa-fw fa-css3"></i>CSS</p>
+        <div class="bar">
+            <div class="css">
+                70%
+            </div>
+        </div>
+        <i class="material-icons" style="font-size:48px">javascript</i>
+        <div class="bar">
+            <div class="js">
+                20%
+            </div>
+        </div>
+        <p id="name">Python</p>
+        <div class="bar">
+            <div class="python">
+                65%
+            </div>
+        </div>
+        <p id="name">C++</p>
+        <div class="bar">
+            <div class="cpp">
+                50%
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer">
+            <hr>
+            <img src="gdsc.jpg" alt="GDSC Logo">
+            <h3>Google Developer Student Clubs</h3>
+            <a href="" class="fa fa-facebook" id="fa3"></a>
+            <a href="" class="fa fa-twitter" id="fa4"></a>
+            <a href="http://www.linkedin.com/in/utpal-kumar-3047561b6/" class="fa fa-linkedin" id="fa1" target="_blank"></a>
+            <a href="https://www.instagram.com/utpalk904/" class="fa fa-instagram" id="fa2" target="_blank"></a>
+        </div>
+    </footer>
+</body>
+</html>

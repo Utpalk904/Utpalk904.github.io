@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            position: relative;
+        }
+        img {
+            width: 400px;
+            height: 400px;
+        }
+        .lightbox {
+            top: 0;
+            z-index: 2;
+            width: 100%;
+            height: 100vh;
+            position: fixed;
+            background-color: rgba(0, 0, 0, 0.75);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        .close_icon {
+            background-color: #505050;
+            width: 90px;
+            height: 90px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+        .left, .right {
+            background-color: #505050;
+            width: 90px;
+            height: 90px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+        .left {
+            position: absolute;
+            left: 0;
+        }
+        .right  {
+            position: absolute;
+            right: 0;
+        }
+        .close_icon:hover, .left:hover, .right:hover {
+            transition: 0.4s;
+            filter: brightness(1.70);
+        }
+        .close {
+            font-size: 42px;
+            color: white;
+            font-weight: lighter;
+        }
+
+    </style>
+</head>
+<body>
+    <a href="hover.html">Check Hover</a>
+    <div class="container" id="container"></div>
+</body>
+
+<script>
+    let container=document.getElementById('container');
+    let arr=["https://upload.wikimedia.org/wikipedia/commons/c/cc/Grey_squirrel_400px.jpg","https://www.pngkey.com/png/detail/350-3505674_apple-fruit-icon-400-x-400px.png","https://images.all-free-download.com/images/graphiclarge/boulder_creek_forest_lake_landscape_moss_nature_600401.jpg","https://images.all-free-download.com/images/graphiclarge/canyon_desert_forest_hill_landscape_mountain_nature_600620.jpg","https://topofthelist.net/wp-content/uploads/2016/01/Hydrangeas.jpg","https://24rdmo160xr11sgco31bxj30-wpengine.netdna-ssl.com/wp-content/uploads/2020/04/clement-fusil-Fpqx6GGXfXs-unsplash-400px.jpg","https://www.researchgate.net/profile/Ana-Belen-Petro/publication/221121660/figure/fig1/AS:393937056485384@1470933321643/Top-original-image-600-400-pixels-Bottom-two-representations-of-the-original_Q640.jpg","https://www.goldeneagleluxurytrains.com/img2/2022-01-24-09-43-03-Nude-Skincare-Product-Instagram-Story-(Instagram-Post)-(400-%C3%97-400px).png","https://visme.co/blog/wp-content/uploads/2020/09/2-3.jpg"];
+
+    let containerHtml='';
+    arr.forEach(function(element,index){
+        containerHtml+=`
+        <img src="${element}" alt="Random Pic" class="slide" id="${index}" onclick="lightBox(this.id)">
+        <div class="lightbox" id="lightbox${index}">
+            <div class="close_icon" id="close${index}">
+                <i class="material-icons close">close</i>
+            </div>
+            <div class="left" id="${index+10}" onclick="leftImg(this.id)">
+                <i class="material-icons close">chevron_left</i>
+            </div>
+            <div class="right" id="${index+20}" onclick="rightImg(this.id)">
+                <i class="material-icons close">chevron_right</i>
+            </div>
+            <img src="${element}" alt="Random Pic" class="slide" id="img_light">
+        </div>`;
+    });
+    
+    container.innerHTML=containerHtml;
+
+    function leftImg(index) {
+        index=index-10;
+        if (index==0){
+            let lightbox=document.getElementById(`lightbox${index}`);
+            lightbox.style.display='none';
+            index=arr.length-1;
+            lightBox(index);
+        }
+        else {
+            let lightbox=document.getElementById(`lightbox${index}`);
+            lightbox.style.display='none';
+            lightBox(index-1);
+        };
+    };
+
+    function rightImg(index) {
+        index=index-20;
+        if (index==arr.length-1){
+            let lightbox=document.getElementById(`lightbox${index}`);
+            lightbox.style.display='none';
+            index=0;
+            lightBox(index);
+        }
+        else {
+            let lightbox=document.getElementById(`lightbox${index}`);
+            lightbox.style.display='none';
+            lightBox(index+1);
+        };
+    };
+    function lightBox(index) {
+        let lightbox=document.getElementById(`lightbox${index}`);
+        lightbox.style.display='flex';
+
+        let close=document.getElementById(`close${index}`);
+        close.addEventListener('click',()=>{
+            lightbox.style.display='none';
+        });
+    };
+</script>
+</html>

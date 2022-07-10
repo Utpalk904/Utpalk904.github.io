@@ -1,0 +1,214 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(54, 53, 60);
+    color: white;
+    height: 4rem;
+    padding: 0 2rem;
+}
+
+.left .name {
+    font-size: 1.2rem;
+    margin-right: 2.5rem;
+    cursor: pointer;
+}
+
+.left .home {
+    cursor: pointer;
+}
+
+nav .nav_down {
+    display: none;
+}
+
+nav .nav_up {
+    display: flex;
+    align-items: center;    
+    justify-content: space-between;
+}
+
+.right .search, .nav_down .search {
+    display: flex;
+    align-items: center;
+}
+
+nav input {
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    height: 2.3rem;
+    padding: 11px;
+    margin-right: .5rem;
+}
+
+nav input:focus {
+    outline: none;
+}
+
+nav button {
+    height: 2.3rem;
+    width: 6rem;
+    padding: 5px;
+    border-radius: 5px;
+    color: green;
+    border: 1px solid green;
+    background-color: rgb(54, 53, 60);
+    cursor: pointer;
+}
+
+nav button:hover {
+    color: white;
+    border: 1px solid white;
+}
+
+.right .menu-icon {
+    display: none;
+    user-select: none;
+    cursor: pointer;
+}
+
+main {
+    margin: 1.5rem auto;
+    width: 60%;
+}
+
+main .header1 {
+    margin-bottom: .5rem;
+}
+
+main .addnote_section {
+    border: 2px solid rgb(221, 218, 218);
+    border-radius: 5px;
+    padding: .8rem 1rem;
+    margin-bottom: 1rem;
+}
+
+main .addnote_section .addnote_head {
+    font-weight: 600;
+    margin-bottom: .5rem;
+    font-size: 1.2rem;
+}
+
+main .addnote_section textarea {
+    width: 100%;
+    height: 100px;
+    border: 2px solid rgb(221, 218, 218);
+    border-radius: 5px;
+    padding: .5rem;
+    font-size: 1rem;
+}
+
+main .addnote_section #txtarea2 {
+    height: 39px;
+    margin-bottom: .5rem;
+}
+main .addnote_section textarea:focus {
+    outline: none;
+    border: 2px solid #1e79e0;
+}
+
+main .addnote_section button {
+    margin-top: 0.5rem;
+    border: none;
+    background-color: #1d66b9;
+    color: white;
+    border-radius: 5px;
+    padding: .7rem 1.4rem;
+}
+
+main .addnote_section button:hover {
+    background-color: #1e79e0;
+}
+
+hr {
+    border: .1px solid rgb(221, 218, 218);
+}
+
+main .header2 {
+    margin: 1rem 0;
+}
+
+main .notes_section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 1rem;
+}
+
+main .notes_section .card {
+    margin-top: 1rem;
+    border-radius: 5px;
+    border: 2px solid rgb(221, 218, 218);
+    padding: .5rem 1rem;
+    width: 18.23rem;
+    height: auto;
+}
+
+main .notes_section .card .notes {
+    font-size: .9rem;
+    margin-bottom: 0.5rem;
+}
+
+main .notes_section .card .header3 {
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+main .notes_section .card button {
+    margin-top: 0.5rem;
+    border: none;
+    background-color: #1d66b9;
+    color: white;
+    border-radius: 5px;
+    padding: .7rem 1.4rem;
+}
+
+main .notes_section .card button:hover {
+    background-color: #1e79e0;
+}
+
+
+@media screen and (max-width: 750px) {
+    .right input, .right button {
+        display: none;
+    }
+
+    .right .menu-icon {
+        display: block;
+        border: 1px solid green;
+        border-radius: 5px;
+        padding: .4rem;
+    }
+
+    nav .nav_down {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-top: 1rem;
+        display: none;
+    }
+
+    nav .left .home {
+        display: none;
+    }
+
+    main {
+        width: 80%;
+    }
+}
