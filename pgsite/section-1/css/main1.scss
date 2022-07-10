@@ -105,11 +105,13 @@ nav {
     .user {
         position: relative;
         cursor: pointer;
+        transition: 0.8s;
 
         svg {
             @include flex_row(center,center);
             width: 65px;
             height: 65px;
+            transition: 0.8s;
         }
 
         .menu_icon, .fa-bars, .close_icon, .close {

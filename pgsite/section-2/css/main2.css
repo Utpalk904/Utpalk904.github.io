@@ -50,7 +50,7 @@ html, body {
   position: relative;
   text-align: center;
   font-size: 18px;
-  background: aquamarine;
+  background: transparent;
   border-radius: 10px;
   /* Center slide text vertically */
   display: flex;
@@ -60,7 +60,7 @@ html, body {
 
 .swiper-slide img {
   display: block;
-  width: 100%;
+  width: 90%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -133,6 +133,9 @@ html, body {
 }
 @media screen and (max-width: 1050px) {
   .section_2 {
-    padding-left: 3rem;
+    padding-left: 0rem;
+  }
+  .section_2_title, .section_2_more {
+    padding-left: 4rem;
   }
 }/*# sourceMappingURL=main2.css.map */

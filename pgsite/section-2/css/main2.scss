@@ -52,9 +52,8 @@ html, body {
     position: relative;
     text-align: center;
     font-size: 18px;
-    background: aquamarine;
+    background: transparent;
     border-radius: 10px;
-    // min-width: 350px;
 
     /* Center slide text vertically */
     display: -webkit-box;
@@ -79,10 +78,9 @@ html, body {
 .swiper-slide img {
     // position: absolute;
     display: block;
-    width: 100%;
+    width: 90%;
     height: 100%;
     object-fit: cover;
-    // overflow: hidden;
     border-radius: 10px;
     transition: 0.5s;
 
@@ -146,7 +144,7 @@ html, body {
     }
 }
 
-@media screen and (max-width:500px) {
+@media screen and (max-width: 500px) {
     .section_2 {
         padding-left: 2rem;
     }
@@ -160,6 +158,10 @@ html, body {
 
 @media screen and (max-width: 1050px) {
     .section_2 {
-        padding-left: 3rem;
+        padding-left: 0rem;
+    }
+
+    .section_2_title, .section_2_more {
+        padding-left: 4rem;
     }
 }

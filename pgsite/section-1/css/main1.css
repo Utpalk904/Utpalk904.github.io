@@ -96,6 +96,7 @@ nav .nav_links .links_change:hover:before {
 nav .user {
   position: relative;
   cursor: pointer;
+  transition: 0.8s;
 }
 nav .user svg {
   display: flex;
@@ -103,6 +104,7 @@ nav .user svg {
   align-items: center;
   width: 65px;
   height: 65px;
+  transition: 0.8s;
 }
 nav .user .menu_icon, nav .user .fa-bars, nav .user .close_icon, nav .user .close {
   display: none;
