@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Finlandica&display=swap');
+
+@import "mixin";
+
+html {
+    font-size: 16px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Finlandica', sans-serif;
+    transition: all 0.8s;
+}
+
+.section_1 {
+    background: url('../Assets/bg.png') no-repeat center;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+
+    @include flex_column(center,center);
+}
+
+nav {
+    @include flex_row(space-around,center);
+
+    background-color: transparent;
+    width: 100%;
+    height: 10rem;
+    color: white;
+    font-size: 1.6rem;
+    position: fixed;
+    top: 0;
+    transition: all 0.8s;
+    z-index: 2;
+
+    .nav_title {
+        font-weight: 600;
+        cursor: pointer;
+    }
+
+    .nav_links .links {
+        margin: 0 1rem;
+        font-size: 1.1rem;
+        font-weight: 600;
+        cursor: pointer;
+
+        & {
+            position: relative;
+        }
+          
+        &::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: white;
+            transform-origin: bottom left;
+            transition: transform 0.25s ease-out;
+        }
+          
+        &:hover::before {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+    }
+
+    .nav_links .links_change {
+        margin: 0 1rem;
+        font-size: 1.1rem;
+        font-weight: 600;
+        cursor: pointer;
+
+        & {
+            position: relative;
+        }
+          
+        &:before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: black;
+            transform-origin: bottom left;
+            transition: transform 0.25s ease-out;
+        }
+          
+        &:hover:before {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+    }
+
+    .user {
+        position: relative;
+        cursor: pointer;
+
+        svg {
+            @include flex_row(center,center);
+            width: 65px;
+            height: 65px;
+        }
+
+        .menu_icon, .fa-bars, .close_icon, .close {
+            display: none;
+        }
+
+        i {
+            @include flex_row(center,center);
+            position: absolute;
+            top: 50%;
+            right: 50%;
+            left: 50%;
+            bottom: 50%;
+            font-size: 1.175rem;
+        }
+    }
+}
+
+.nav_change {
+    height: 6rem;
+    background-color: white;
+    color: black;
+    -webkit-box-shadow: 0px 10px 30px 0px rgba(0,0,0,00.22);
+    -moz-box-shadow: 0px 10px 30px 0px rgba(0,0,0,00.22);
+    box-shadow: 0px 10px 30px 0px rgba(0,0,0,0.22);
+    transition: 0.8s;
+}
+
+.section_1_content {
+    @include flex_column(center,center);
+    color: white;
+    text-align: center;
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .section_1_title {
+        width: 49%;
+        font-weight: 600;
+    }
+
+    .section_1_txt {
+        font-size: 1.5rem;
+        width: 49%;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    nav {
+        @include flex_row(space-between,center);
+        padding: 0 3rem;
+        height: 9rem;
+    }
+    .nav_change {
+        height: 7rem;
+    }
+    .section_1_content {
+        & .section_1_title, & .section_1_txt {
+            width: 60%;
+        }
+    }
+}
+
+@media screen and (max-width: 840px) {
+    nav {
+        padding: 0 4rem;
+    }
+    nav .user .menu_icon, nav .user .fa-bars {
+        display: flex;
+    }
+    nav .user .user_icon, nav .user .fa-user-o {
+        display: none;
+    }
+    nav .nav_links {
+        display: none;
+    }
+    .section_1_content {
+        & .section_1_title, & .section_1_txt {
+            width: 60%;
+        }
+    }
+}
+
+@media screen and (max-width: 770px) {
+    .section_1_content {
+        & .section_1_title, & .section_1_txt {
+            width: 70%;
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    nav {
+        padding: 0 2.5rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    nav {
+        padding: 0 2rem;
+    }
+}

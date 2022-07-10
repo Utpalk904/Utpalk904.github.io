@@ -1,0 +1,138 @@
+html, body {
+  position: relative;
+  height: 100%;
+}
+
+.section_2 {
+  width: 100%;
+  height: 100%;
+  padding-top: 5rem;
+  padding-left: 10rem;
+  background-color: #fff;
+}
+
+.section_2_title {
+  margin-bottom: 3rem;
+}
+.section_2_title h1 {
+  font-weight: 600;
+}
+
+.section_2_more {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 3rem;
+  margin-bottom: 5rem;
+  font-weight: 600;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.section_2_more:hover hr {
+  width: 64px;
+  transition: width 0.5s;
+}
+.section_2_more hr {
+  border: 1px solid black;
+  margin-left: 1.2rem;
+  width: 32px;
+  transition: width 0.5s;
+}
+
+.swiper {
+  width: 100%;
+  height: 410px;
+}
+
+.swiper-slide {
+  cursor: pointer;
+  position: relative;
+  text-align: center;
+  font-size: 18px;
+  background: aquamarine;
+  border-radius: 10px;
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+.swiper-slide img:hover {
+  border-radius: 10px;
+  transform: scale(1.02);
+  transition: 0.5s;
+}
+.swiper-slide img:hover ~ .swiper_details {
+  transform: translateY(-40px);
+  transition: 0.5s;
+}
+.swiper-slide img:hover ~ .swiper_details .view_details {
+  transform: translateY(20px);
+  transition: 0.5s;
+  display: block;
+}
+
+.swiper_details {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  padding: 0 1.7rem;
+  width: 100%;
+  text-align: left;
+  position: absolute;
+  color: white;
+  bottom: 0;
+  transition: 0.5s;
+}
+.swiper_details div {
+  margin: 0.5rem 0;
+}
+.swiper_details:hover {
+  transform: translateY(-40px);
+  transition: 0.5s;
+}
+.swiper_details:hover .view_details {
+  transform: translateY(20px);
+  transition: 0.5s;
+  display: block;
+}
+.swiper_details .price {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.swiper_details .facility {
+  font-size: 0.8rem;
+}
+.swiper_details .view_details {
+  font-size: 1rem;
+  transform: translateY(100px);
+  display: none;
+}
+
+@media screen and (max-width: 500px) {
+  .section_2 {
+    padding-left: 2rem;
+  }
+}
+@media screen and (max-width: 840px) {
+  .section_2 {
+    padding-left: 4rem;
+  }
+}
+@media screen and (max-width: 1050px) {
+  .section_2 {
+    padding-left: 3rem;
+  }
+}/*# sourceMappingURL=main2.css.map */
