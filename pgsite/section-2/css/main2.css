@@ -88,7 +88,7 @@ html, body {
       -ms-user-select: none;
           user-select: none;
   cursor: pointer;
-  padding: 0 1.7rem;
+  padding: 0 2.5rem;
   width: 100%;
   text-align: left;
   position: absolute;
@@ -123,19 +123,33 @@ html, body {
 
 @media screen and (max-width: 500px) {
   .section_2 {
-    padding-left: 2rem;
+    padding-left: 1.2rem !important;
+  }
+  .section_2_title h1, .section_2_more {
+    padding-left: 1.3rem !important;
   }
 }
 @media screen and (max-width: 840px) {
   .section_2 {
-    padding-left: 4rem;
+    padding-left: 3.1rem;
+  }
+  .section_2_title h1, .section_2_more {
+    padding-left: 0.7rem;
   }
 }
-@media screen and (max-width: 1050px) {
+@media screen and (max-width: 1049px) {
   .section_2 {
-    padding-left: 0rem;
+    padding-left: 2rem;
   }
-  .section_2_title, .section_2_more {
-    padding-left: 4rem;
+  .section_2_title h1, .section_2_more {
+    padding-left: 1rem;
+  }
+}
+@media screen and (max-width: 1250px) {
+  .section_2 {
+    padding-left: 4.3rem;
+  }
+  .section_2_title h1, .section_2_more {
+    padding-left: 1rem;
   }
 }/*# sourceMappingURL=main2.css.map */
