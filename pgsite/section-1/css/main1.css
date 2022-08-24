@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Finlandica&display=swap");
+
 html {
   font-size: 16px;
 }
@@ -15,10 +16,11 @@ body {
 }
 
 .section_1 {
-  background: url("../Assets/bg.png") no-repeat center;
+  background: url("../Assets/bg.png") no-repeat center fixed;
   background-size: cover;
   width: 100%;
-  height: 100vh;
+  height: 100%;
+  min-height: 550px;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -39,19 +41,23 @@ nav {
   transition: all 0.8s;
   z-index: 2;
 }
+
 nav .nav_title {
   font-weight: 600;
   cursor: pointer;
 }
+
 nav .nav_links .links {
   margin: 0 1rem;
   font-size: 1.1rem;
   font-weight: 600;
   cursor: pointer;
 }
+
 nav .nav_links .links {
   position: relative;
 }
+
 nav .nav_links .links::before {
   content: "";
   position: absolute;
@@ -64,19 +70,23 @@ nav .nav_links .links::before {
   transform-origin: bottom left;
   transition: transform 0.25s ease-out;
 }
+
 nav .nav_links .links:hover::before {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
+
 nav .nav_links .links_change {
   margin: 0 1rem;
   font-size: 1.1rem;
   font-weight: 600;
   cursor: pointer;
 }
+
 nav .nav_links .links_change {
   position: relative;
 }
+
 nav .nav_links .links_change:before {
   content: "";
   position: absolute;
@@ -89,15 +99,18 @@ nav .nav_links .links_change:before {
   transform-origin: bottom left;
   transition: transform 0.25s ease-out;
 }
+
 nav .nav_links .links_change:hover:before {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
+
 nav .user {
   position: relative;
   cursor: pointer;
   transition: 0.8s;
 }
+
 nav .user svg {
   display: flex;
   justify-content: center;
@@ -106,9 +119,14 @@ nav .user svg {
   height: 65px;
   transition: 0.8s;
 }
-nav .user .menu_icon, nav .user .fa-bars, nav .user .close_icon, nav .user .close {
+
+nav .user .menu_icon,
+nav .user .fa-bars,
+nav .user .close_icon,
+nav .user .close {
   display: none;
 }
+
 nav .user i {
   display: flex;
   justify-content: center;
@@ -136,14 +154,18 @@ nav .user i {
   align-items: center;
   color: white;
   text-align: center;
+  /* margin-top: 10rem; */
 }
+
 .section_1_content h1 {
   font-size: 2rem;
 }
+
 .section_1_content .section_1_title {
   width: 49%;
   font-weight: 600;
 }
+
 .section_1_content .section_1_txt {
   font-size: 1.5rem;
   width: 49%;
@@ -157,42 +179,60 @@ nav .user i {
     padding: 0 3rem;
     height: 9rem;
   }
+
   .nav_change {
     height: 7rem;
   }
-  .section_1_content .section_1_title, .section_1_content .section_1_txt {
+
+  .section_1_content .section_1_title,
+  .section_1_content .section_1_txt {
     width: 60%;
   }
 }
+
 @media screen and (max-width: 840px) {
   nav {
     padding: 0 4rem;
   }
-  nav .user .menu_icon, nav .user .fa-bars {
+
+  nav .user .menu_icon,
+  nav .user .fa-bars {
     display: flex;
   }
-  nav .user .user_icon, nav .user .fa-user-o {
+
+  nav .user .user_icon,
+  nav .user .fa-user-o {
     display: none;
   }
+
   nav .nav_links {
     display: none;
   }
-  .section_1_content .section_1_title, .section_1_content .section_1_txt {
+
+  .section_1_content .section_1_title,
+  .section_1_content .section_1_txt {
     width: 60%;
   }
 }
+
 @media screen and (max-width: 770px) {
-  .section_1_content .section_1_title, .section_1_content .section_1_txt {
+
+  .section_1_content .section_1_title,
+  .section_1_content .section_1_txt {
     width: 70%;
   }
 }
+
 @media screen and (max-width: 500px) {
   nav {
     padding: 0 2.5rem;
   }
 }
+
 @media screen and (max-width: 400px) {
   nav {
     padding: 0 2rem;
   }
-}/*# sourceMappingURL=main1.css.map */
+}
+
+/*# sourceMappingURL=main1.css.map */

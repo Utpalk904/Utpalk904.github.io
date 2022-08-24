@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.footer {
+    background-color: #F7F7F7;
+    height: 60vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 2rem;
+    padding-top: 5rem;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3vh;
+}
+
+.space {
+    margin-top: 2vh;
+    font-weight: 100;
+    opacity: 0.6;
+}
+
+.icons {
+    display: flex;
+    margin-top: 3vh;
+}
+
+.side {
+    margin-right: 2vh;
+}
+
+.conditions {
+    margin-top: 5vh;
+}
+
+.column h4 {
+    font-size: 1.3rem;
+}
+
+@media only screen and (max-width: 850px) {
+    .footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 25vh;
+    }
+
+    .address {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .address-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .conditions {
+        font-size: 0.8rem;
+    }
+
+    .opa {
+        font-size: 0.8rem;
+    }
+
+    .column {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container {
+        margin-top: -2vh;
+        margin-bottom: 3vh;
+    }
+}
