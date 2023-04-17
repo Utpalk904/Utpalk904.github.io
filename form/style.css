@@ -150,6 +150,14 @@ form .email label {
     background-color: rgb(130, 189, 42);
 }
 
+.file {
+    padding: .6rem 2rem;
+    text-decoration: none;
+    border: 1px solid black;
+    background-color: #5995DA;
+    color: white;
+}
+
 @media screen and (min-width:700px){
     header div h1 {
         font-size: 30px;
