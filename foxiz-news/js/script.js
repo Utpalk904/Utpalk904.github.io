@@ -12,7 +12,7 @@ fetch(url2).then(response=>response.json())
 .then(data=>{
     let articles=data.articles;
     let html='';
-    articles.forEach(function(element){
+    articles && articles.forEach(function(element){
         html+=
             `<div class="card_news">
                 <div class="headline"><b>Headline : </b>${element.title}</div>
